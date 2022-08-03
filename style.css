@@ -1,6 +1,5 @@
 body {
     background: linear-gradient(220deg, rgb(41, 243, 41), rgb(255, 55, 19));
-    /* filter: brightness(1.5); */
 }
 
 h1 {
@@ -41,7 +40,8 @@ img, .avatar {
 .category {
     width: 80%;
     height: 200px;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
+    border-radius: 4px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 12px;
