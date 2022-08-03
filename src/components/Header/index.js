@@ -2,11 +2,13 @@
 
 import './header.scss';
 
+import logoAvatar from 'src/assets/images/kisspng-computer-icons-avatar-login-user-avatar-5ac207e6c8c133.5629676315226654468223.png';
+
 // Composant
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <div className="navbar-log">
         <div className="dropdown">
           <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu
@@ -20,11 +22,11 @@ function Header() {
           </div>
         </div>
         <div className="connexionBlock">
-          <img className="avatar" src="images/kisspng-computer-icons-avatar-login-user-avatar-5ac207e6c8c133.5629676315226654468223.png" alt="avatar " />
+          <img className="avatar" src={logoAvatar} alt="avatar " />
         </div>
 
       </div>
-      <h1 className="text-center">FAMILY TRIP</h1>
+      <h1 className="text-center header__title">FAMILY TRIP</h1>
 
     </header>
   );

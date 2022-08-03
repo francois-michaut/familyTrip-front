@@ -1,0 +1,50 @@
+.main__title {
+  font-size: medium;
+  text-align: center;
+  margin: 8px;
+}
+.category {
+  width: 80%;
+  height: 200px;
+  /* border: 2px solid gray; */
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  color: rgb(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  font-weight: bold;
+  filter: brightness(1.5);
+}
+.activities {
+  background-image: url('../../assets/images/velo-natation-randonnee-quel-sport-ete-choisir-pour-bruler-plus-calories.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.shopping {
+  background-image: url('../../assets/images/healthymood-30-aliments-healthy-pour-vos-plats-d-ete.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.remembers {
+  background-image: url('../../assets/images/vignette-focus.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tribe {
+  background-image: url('../../assets/images/post_image_100.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: white;
+}
