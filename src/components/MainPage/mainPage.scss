@@ -15,11 +15,9 @@
   align-items: center;
   justify-content: center;
 }
-h3 {
-  color: rgb(255, 255, 255, 0.2);
-  text-transform: uppercase;
-  font-weight: bold;
-  filter: brightness(1.5);
+.card-title {
+  font-size: larger;
+  color: white;
 }
 .activities {
   background-image: url('../../assets/images/velo-natation-randonnee-quel-sport-ete-choisir-pour-bruler-plus-calories.jpg');
@@ -28,7 +26,7 @@ h3 {
 }
 
 .shopping {
-  background-image: url('../../assets/images/healthymood-30-aliments-healthy-pour-vos-plats-d-ete.jpeg');
+  background-image: url('../../assets/images/20-aliments-pour-un-ete-en-pleine-forme.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }

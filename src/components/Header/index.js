@@ -26,7 +26,7 @@ function Header() {
         </div>
 
       </div>
-      <h1 className="text-center header__title">FAMILY TRIP</h1>
+      <h1 className="text-center header__title ">FAMILY TRIP</h1>
 
     </header>
   );
