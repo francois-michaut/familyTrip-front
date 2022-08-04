@@ -1,7 +1,11 @@
+main {
+  background: linear-gradient(220deg, rgb(41, 243, 41), rgb(255, 55, 19));
+  width: 100%;
+}
 .main__title {
-  font-size: medium;
+  font-size: larger;
   text-align: center;
-  margin: 8px;
+  padding: 8px;
 }
 .category {
   width: 80%;
@@ -46,3 +50,7 @@
 a {
   color: white;
 }
+.card-img-top {
+  height: 200px;
+}
+
