@@ -11,7 +11,7 @@ function Header() {
   return (
     <header className="header">
       <div className="navbar-log">
-        <div className="dropdown">
+        <div className="dropdown d-lg-none">
           <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu
           </button>
           <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -27,7 +27,30 @@ function Header() {
         </div>
 
       </div>
-      <h1 className="text-center header__title ">FAMILY TRIP</h1>
+      <h1 className="text-center header__title m-2"><a href="/">FAMILY TRIP</a></h1>
+      <nav className="navbar bg-dark d-none d-lg-block navbar-expand-lg bg-light my-2">
+        <div className="container-fluid">
+          <div className="collapse navbar-collapse " id="navbarNav">
+            <ul className="navbar-nav text-light p-2 justify-content-around d-flex">
+              <li className="nav-item ">
+                <a className="nav-link " aria-current="page" href="/">Accueil</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " aria-current="page" href="/Acitvity">Activités</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/Shopping">Shopping</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/Remember">Souvenirs</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/Tribe">Tribu</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
     </header>
   );

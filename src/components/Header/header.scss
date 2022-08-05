@@ -3,8 +3,10 @@
   &__title {
       font-family: 'Bangers', cursive;
       font-size:3rem;
-  
-  }
+      @media screen and (min-width:1400px){
+        font-size: 4rem;
+              }
+    }
 }
 .connexionBlock {
   position:absolute;
@@ -29,3 +31,6 @@
   width: 50px;
 }
 
+.navbar-nav  {
+  width: 100%;
+}
