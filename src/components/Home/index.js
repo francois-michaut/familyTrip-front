@@ -4,6 +4,7 @@ import Activity from '../Activity';
 import Footer from '../Footer';
 import Header from '../Header';
 import MainPage from '../MainPage';
+import Shopping from '../Shopping';
 import './styles.css';
 
 // == Composant
@@ -14,8 +15,8 @@ function Home() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/Activity" element={<Activity />} />
-        {/* <Route path="/Shopping" element={<Shopping />} />
-        <Route path="/Remember" element={<Remember />} />
+        <Route path="/Shopping" element={<Shopping />} />
+        {/* <Route path="/Remember" element={<Remember />} />
         <Route path="/Tribe" element={<Tribe />} /> */}
       </Routes>
       <Footer />

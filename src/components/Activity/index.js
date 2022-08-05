@@ -20,8 +20,20 @@ function Activity() {
           <input type="text" className="form-control" id="activity-type" placeholder="1h" />
         </div>
         <div className="mb-3">
+          <label htmlFor="activity-type" className="form-label">Horaires</label>
+          <input type="text" className="form-control" id="activity-type" placeholder="de 13h à 15h" />
+        </div>
+        <div className="mb-3">
           <label htmlFor="activity-type" className="form-label">Lieu</label>
-          <input type="lieu" className="form-control" id="activity-type" placeholder="Nice" />
+          <input type="text" className="form-control" id="activity-type" placeholder="Nice" />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="activity-type" className="form-label">Nombre de personnes max.</label>
+          <input type="number" className="form-control" id="activity-type" placeholder="4" />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="activity-type" className="form-label">A prévoir</label>
+          <textarea type="text" className="form-control" id="activity-type" placeholder="Crème solaire, gourde..." />
         </div>
         <div className="activity__form__button">
           <button type="button" className="btn btn-success">Créer une activité</button>
