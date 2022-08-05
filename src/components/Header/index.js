@@ -2,29 +2,55 @@
 
 import './header.scss';
 
+import logoAvatar from 'src/assets/images/kisspng-computer-icons-avatar-login-user-avatar-5ac207e6c8c133.5629676315226654468223.png';
+import { NavLink } from 'react-router-dom';
+
 // Composant
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <div className="navbar-log">
-        <div className="dropdown">
+        <div className="dropdown d-lg-none">
           <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu
           </button>
           <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a className="dropdown-item" href="#">Accueil</a>
-            <a className="dropdown-item" href="activities.html">Activités</a>
-            <a className="dropdown-item" href="#">Shopping</a>
-            <a className="dropdown-item" href="#">Souvenirs</a>
-            <a className="dropdown-item" href="#">Tribe Creation</a>
+            <NavLink className="dropdown-item" to="/">Accueil</NavLink>
+            <NavLink className="dropdown-item" to="/Activity">Activités</NavLink>
+            <NavLink className="dropdown-item" to="/Shopping">Shopping</NavLink>
+            <NavLink className="dropdown-item" to="/Remember">Souvenirs</NavLink>
+            <NavLink className="dropdown-item" to="/Tribe">Tribe Creation</NavLink>
           </div>
         </div>
         <div className="connexionBlock">
-          <img className="avatar" src="images/kisspng-computer-icons-avatar-login-user-avatar-5ac207e6c8c133.5629676315226654468223.png" alt="avatar " />
+          <img className="avatar" src={logoAvatar} alt="avatar " />
         </div>
 
       </div>
-      <h1 className="text-center">FAMILY TRIP</h1>
+      <h1 className="text-center header__title m-2"><a href="/">FAMILY TRIP</a></h1>
+      <nav className="navbar bg-dark d-none d-lg-block navbar-expand-lg bg-light my-2">
+        <div className="container-fluid">
+          <div className="collapse navbar-collapse " id="navbarNav">
+            <ul className="navbar-nav text-light p-2 justify-content-around d-flex">
+              <li className="nav-item ">
+                <a className="nav-link " aria-current="page" href="/">Accueil</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " aria-current="page" href="/Acitvity">Activités</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/Shopping">Shopping</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/Remember">Souvenirs</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/Tribe">Tribu</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
     </header>
   );

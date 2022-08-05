@@ -1,0 +1,36 @@
+.header {
+  background-color: white;
+  &__title {
+      font-family: 'Bangers', cursive;
+      font-size:3rem;
+      @media screen and (min-width:1400px){
+        font-size: 4rem;
+              }
+    }
+}
+.connexionBlock {
+  position:absolute;
+  top: 8px;
+  right: 8px;
+}
+.dropdown {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+}
+.logo {
+  display: inline-block;
+}
+.navbar-log {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px;
+  height: 80px;
+}
+.avatar {
+  width: 50px;
+}
+
+.navbar-nav  {
+  width: 100%;
+}
