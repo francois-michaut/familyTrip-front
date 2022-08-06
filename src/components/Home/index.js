@@ -7,6 +7,7 @@ import MainPage from '../MainPage';
 import Shopping from '../Shopping';
 import Remember from '../Remember';
 import './styles.css';
+import Tribe from '../Tribe';
 
 // == Composant
 function Home() {
@@ -18,7 +19,7 @@ function Home() {
         <Route path="/Activity" element={<Activity />} />
         <Route path="/Shopping" element={<Shopping />} />
         <Route path="/Remember" element={<Remember />} />
-        {/* <Route path="/Tribe" element={<Tribe />} /> */}
+        <Route path="/Tribe" element={<Tribe />} />
       </Routes>
       <Footer />
     </div>

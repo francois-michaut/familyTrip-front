@@ -11,8 +11,8 @@ function Header() {
   return (
     <header className="header">
       <div className="navbar-log">
-        <div className="dropdown d-lg-none">
-          <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu
+        <div className="dropdown d-lg-none ">
+          <button className="btn btn-primary fixed-top dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu
           </button>
           <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <NavLink className="dropdown-item" to="/">Accueil</NavLink>
