@@ -36,7 +36,7 @@ function Activity() {
           <textarea type="text" className="form-control" id="activity-type" placeholder="Crème solaire, gourde..." />
         </div>
         <div className="activity__form__button">
-          <button type="button" className="btn btn-success">Créer une activité</button>
+          <button type="button" className="btn btn-success">Créer l' activité</button>
         </div>
       </div>
     </main>
