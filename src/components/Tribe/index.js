@@ -1,9 +1,28 @@
 // Import
 import './tribe.scss';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import axios from 'axios';
+import { getUser, loadUsers } from '../../actions/users';
+
+// import { getUser } from '../../actions/users';
+
 // Composant
 function Tribe() {
+  const dispatch = useDispatch();
+  const usersList = useSelector((state) => state.users);
+
+  useEffect(
+    () => {
+      dispatch(getUser());
+    },
+    [],
+  );
+  console.log(usersList);
+
   return (
+
     <main className="tribe">
       <h2 className="tribe__title">
         Le coin des tribus
@@ -30,5 +49,6 @@ function Tribe() {
     </main>
   );
 }
+
 // export
 export default Tribe;
