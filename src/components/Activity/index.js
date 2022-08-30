@@ -9,6 +9,7 @@ import {
   saveLocationActivity,
   saveMembersActivity,
   saveMoreActivity,
+  postActivity,
 } from '../../actions/activity';
 import './activity.scss';
 // Composant
@@ -44,6 +45,11 @@ function Activity() {
     dispatch(saveMoreActivity(evt.target.value));
   }
 
+  function handleSubmitActivity() {
+    console.log('Activité créée');
+    dispatch(postActivity());
+  }
+
   return (
     <main className="activity">
       <h2 className="activity__title"> Programmer une activité</h2>
@@ -77,7 +83,7 @@ function Activity() {
           <textarea type="text" className="form-control" id="activity-toCheck" placeholder="Crème solaire, gourde..." onChange={handleMoreActivity} />
         </div>
         <div className="activity__form__button">
-          <button type="button" className="btn btn-success">Créer l' activité</button>
+          <button type="button" className="btn btn-success" onClick={handleSubmitActivity}>Créer l' activité</button>
         </div>
       </div>
     </main>

@@ -59,3 +59,11 @@ export const saveMoreActivity = (value) => ({
   type: SAVE_MORE_ACTIVITY,
   value,
 });
+
+// ACTION TYPE POST_ACTIVITY
+export const POST_ACTIVITY = 'POST_ACTIVITY';
+
+// ACTION CREATOR postActivity
+export const postActivity = () => ({
+  type: POST_ACTIVITY,
+});
