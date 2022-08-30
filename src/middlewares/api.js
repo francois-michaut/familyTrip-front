@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { POST_ACTIVITY } from '../actions/activity';
+import { POST_ACTIVITY, cleanInputForm } from '../actions/activity';
 
 import {
   GET_TRIBES,
@@ -96,6 +96,7 @@ const apiMiddleware = (store) => (next) => (action) => {
         )
         .then((response) => {
           console.log(response.config.data);
+          store.dispatch(cleanInputForm());
         })
         .catch(() => {
           console.log('erreur Api');
