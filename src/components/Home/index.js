@@ -6,6 +6,7 @@ import Header from '../Header';
 import MainPage from '../MainPage';
 import Shopping from '../Shopping';
 import Remember from '../Remember';
+import MyTribe from '../MyTribe';
 import './styles.css';
 import Tribe from '../Tribe';
 
@@ -20,6 +21,7 @@ function Home() {
         <Route path="/Shopping" element={<Shopping />} />
         <Route path="/Remember" element={<Remember />} />
         <Route path="/Tribe" element={<Tribe />} />
+        <Route path="/MyTribe" element={<MyTribe />} />
       </Routes>
       <Footer />
     </div>

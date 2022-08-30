@@ -3,33 +3,53 @@ import './tribe.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getUser } from '../../actions/users';
+import {
+  getUser, postTribeName, saveTribeName, getTribes,
+} from '../../actions/users';
 
 // import { getUser } from '../../actions/users';
 
 // Composant
 function Tribe() {
   const dispatch = useDispatch();
-  const usersList = useSelector((state) => state.users.users);
+  const tribeName = useSelector((state) => state.tribe.tribeName);
+  const tribesList = useSelector((state) => state.tribe.tribesList);
 
   useEffect(
     () => {
       dispatch(getUser());
+      dispatch(getTribes());
     },
     [],
   );
-  console.log(usersList[1]);
+
+  function handleTribeInput(evt) {
+    dispatch(saveTribeName(evt.target.value));
+  }
+
+  function handleFormSubmit(evt) {
+    evt.preventDefault();
+    dispatch(postTribeName());
+  }
 
   return (
     <main className="tribe">
       <h2 className="tribe__title">
         Le coin des tribus
       </h2>
-      <div className="tribe__section">
+      <form className="tribe__section" onSubmit={handleFormSubmit}>
         <h3 className="tribe__section__title">Retrouver une tribu</h3>
         <div className="mb-3">
-          <label htmlFor="tribe-finder" className="form-label" />
-          <input type="text" className="form-control" id="tribe-finder" placeholder="Nom d'une tribu" />
+          {/* <label
+            htmlFor="tribe-finder"
+            className="form-label"
+          /> */}
+          <select className="form-control" name="pets" id="pet-select">
+            <option value="">Choisisssez une tribu</option>
+            {tribesList && tribesList.map((tribe) => (
+              <option value="dog" key={tribe.id}>{tribe.name}</option>
+            ))}
+          </select>
         </div>
         <div className="tribe__form__button">
           <button type="button" className="btn btn-success">Rechercher </button>
@@ -37,18 +57,21 @@ function Tribe() {
         <h2 className="tribe__title">OU</h2>
         <h3 className="tribe__section__title">Créer une tribu</h3>
         <div className="mb-3">
-          <label htmlFor="tribe-finder" className="form-label" />
-          <input type="text" className="form-control" id="tribe-finder" placeholder="Nom de la tribu" />
+          {/* <label htmlFor="tribe-creater" className="form-label" /> */}
+          <input
+            type="text"
+            className="form-control"
+            id="tribe-creater"
+            placeholder="Nom de la tribu"
+            name="tribeName"
+            value={tribeName}
+            onChange={handleTribeInput}
+          />
         </div>
         <div className="tribe__form__button">
-          <button type="button" className="btn btn-success">Créer </button>
+          <button type="submit" name="submit" className="btn btn-success">Créer </button>
         </div>
-      </div>
-      <ul>
-        { usersList && usersList.map((user) => (
-          <li key={user.id}>{user.firstname}</li>
-        ))}
-      </ul>
+      </form>
     </main>
   );
 }

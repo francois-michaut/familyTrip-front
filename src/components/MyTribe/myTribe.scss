@@ -1,0 +1,32 @@
+.myTribe {
+  margin: 40px;
+  text-align: center;
+  &__title {
+    text-transform: uppercase;
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+  }
+  &__members, &__shoppingList, &__remembers, &__activities {
+    border: 2px solid rgb(8, 194, 79);
+    border-radius: 20px;
+    height: 250px;
+    padding: 16px;
+    margin: 20px;
+    &--title {
+      font-size: 1.2rem;
+    font-family: 'Bangers', cursive;
+
+    }
+    &--list {
+      margin: 16px;
+    }
+    &--list li {
+      margin: 8px;
+    }
+  }
+}
+
+.row {
+  margin: 40px;
+}
+
