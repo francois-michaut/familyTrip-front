@@ -53,7 +53,6 @@ function Activity() {
   }
 
   function handleSubmitActivity() {
-    console.log('Activité créée');
     dispatch(postActivity());
   }
 

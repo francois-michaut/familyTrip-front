@@ -6,7 +6,6 @@ import activityImage from 'src/assets/images/velo-natation-randonnee-quel-sport-
 import shoppingImage from 'src/assets/images/20-aliments-pour-un-ete-en-pleine-forme.jpg';
 import rememberImage from 'src/assets/images/vignette-focus.jpg';
 import tribeImage from 'src/assets/images/post_image_100.jpg';
-import { Link, NavLink } from 'react-router-dom';
 // Composant
 
 function MainPage() {

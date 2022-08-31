@@ -69,9 +69,9 @@ export const postActivity = () => ({
 });
 
 // ACTION TYPE CLEAN_INPUT_FORM
-export const CLEAN_INPUT_FORM = 'CLEAN_INPUT_FORM';
+export const CLEAN_INPUT_FORM_ACTIVITIES = 'CLEAN_INPUT_FORM_ACTIVITIES';
 
 // ACTION CREATOR cleanInputForm
-export const cleanInputForm = () => ({
-  type: CLEAN_INPUT_FORM,
+export const cleanInputFormActivities = () => ({
+  type: CLEAN_INPUT_FORM_ACTIVITIES,
 });
