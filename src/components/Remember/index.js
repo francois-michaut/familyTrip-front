@@ -3,7 +3,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import {
   postRemember,
-  saveDateRemember, saveLocationRemember, saveMembersRemember, saveStoriesRemember,
+  saveDateRemember, saveLocationRemember, saveMembersRemember, saveNameRemember,
 } from '../../actions/remember';
 import './remember.scss';
 
@@ -13,7 +13,7 @@ function Remember() {
   const dateRemember = useSelector((state) => state.remember.dateRemember);
   const locationRemember = useSelector((state) => state.remember.locationRemember);
   const membersRemember = useSelector((state) => state.remember.membersRemember);
-  const storiesRemember = useSelector((state) => state.remember.storiesRemember);
+  const nameRemember = useSelector((state) => state.remember.nameRemember);
   const dispatch = useDispatch();
 
   function handleDateRemember(evt) {
@@ -25,8 +25,8 @@ function Remember() {
   function handleMembersRemember(evt) {
     dispatch(saveMembersRemember(evt.target.value));
   }
-  function handleStoriesRemember(evt) {
-    dispatch(saveStoriesRemember(evt.target.value));
+  function handleNameRemember(evt) {
+    dispatch(saveNameRemember(evt.target.value));
   }
   function handleSubmitRemember() {
     dispatch(postRemember());
@@ -35,6 +35,17 @@ function Remember() {
     <main className="remember">
       <h2 className="remember__title">Créer un souvenir</h2>
       <div className="remember__form">
+        <div className="mb-3">
+          <label htmlFor="remember-name" className="form-label">Nom du souvenir</label>
+          <input
+            type="text"
+            className="form-control"
+            id="remember-name"
+            placeholder="Un jour à Paris"
+            value={nameRemember}
+            onChange={handleNameRemember}
+          />
+        </div>
         <div className="mb-3">
           <label htmlFor="remember-date" className="form-label">Date du souvenir</label>
           <input
@@ -66,17 +77,6 @@ function Remember() {
             placeholder="Christophe, Jean-Charles ..."
             value={membersRemember}
             onChange={handleMembersRemember}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="remember-story" className="form-label">Anecdotes, souvenirs</label>
-          <textarea
-            type="text"
-            className="form-control"
-            id="remember-story"
-            placeholder="Un oiseau m'a fait ..."
-            value={storiesRemember}
-            onChange={handleStoriesRemember}
           />
         </div>
         <div className="mb-3 ">

@@ -25,12 +25,12 @@ export const saveMembersRemember = (value) => ({
   value,
 });
 
-// ACTION TYPE SAVE_STORIES_REMEMBER
-export const SAVE_STORIES_REMEMBER = 'SAVE_STORIES_REMEMBER';
+// ACTION TYPE SAVE_NAME_REMEMBER
+export const SAVE_NAME_REMEMBER = 'SAVE_NAME_REMEMBER';
 
-// ACTION CREATOR saveStoriesRemember
-export const saveStoriesRemember = (value) => ({
-  type: SAVE_STORIES_REMEMBER,
+// ACTION CREATOR saveNameRemember
+export const saveNameRemember = (value) => ({
+  type: SAVE_NAME_REMEMBER,
   value,
 });
 

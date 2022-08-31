@@ -1,13 +1,16 @@
 import {
   CLEAN_INPUT_FORM_REMEMBER,
-  SAVE_DATE_REMEMBER, SAVE_LOCATION_REMEMBER, SAVE_MEMBERS_REMEMBER, SAVE_STORIES_REMEMBER,
+  SAVE_DATE_REMEMBER,
+  SAVE_LOCATION_REMEMBER,
+  SAVE_MEMBERS_REMEMBER,
+  SAVE_NAME_REMEMBER,
 } from '../actions/remember';
 
 export const initialState = {
   dateRemember: '',
   locationRemember: '',
   membersRemember: '',
-  storiesRemember: '',
+  nameRemember: '',
 };
 
 function reducer(state = initialState, action = {}) {
@@ -27,10 +30,10 @@ function reducer(state = initialState, action = {}) {
         ...state,
         membersRemember: action.value,
       };
-    case SAVE_STORIES_REMEMBER:
+    case SAVE_NAME_REMEMBER:
       return {
         ...state,
-        storiesRemember: action.value,
+        nameRemember: action.value,
       };
     case CLEAN_INPUT_FORM_REMEMBER:
       return {
@@ -38,7 +41,7 @@ function reducer(state = initialState, action = {}) {
         dateRemember: '',
         locationRemember: '',
         membersRemember: '',
-        storiesRemember: '',
+        nameRemember: '',
       };
     default:
       return state;

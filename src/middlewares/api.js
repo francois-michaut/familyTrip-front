@@ -108,20 +108,21 @@ const apiMiddleware = (store) => (next) => (action) => {
         dateRemember,
         locationRemember,
         membersRemember,
-        storiesRemember,
-      } = state.activities;
+        nameRemember,
+      } = state.remember;
+      console.log(dateRemember);
       axiosInstance
         .post(
           'Api/createRememberPost',
           {
-            dateRemember: dateRemember,
             locationRemember: locationRemember,
+            dateRemember: dateRemember,
             membersRemember: membersRemember,
-            storiesRemember: storiesRemember,
+            nameRemember: nameRemember,
           },
         )
         .then((response) => {
-          console.log(response.config.data);
+          console.log(response.config);
           store.dispatch(cleanInputFormRemember());
         })
         .catch(() => {
