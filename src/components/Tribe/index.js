@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 // Import
 import './tribe.scss';
 
@@ -40,10 +41,10 @@ function Tribe() {
       <form className="tribe__section" onSubmit={handleFormSubmit}>
         <h3 className="tribe__section__title">Retrouver une tribu</h3>
         <div className="mb-3">
-          {/* <label
+          <label
             htmlFor="tribe-finder"
             className="form-label"
-          /> */}
+          />
           <select className="form-control" name="pets" id="pet-select">
             <option value="">Choisisssez une tribu</option>
             {tribesList && tribesList.map((tribe) => (
@@ -57,7 +58,7 @@ function Tribe() {
         <h2 className="tribe__title">OU</h2>
         <h3 className="tribe__section__title">Créer une tribu</h3>
         <div className="mb-3">
-          {/* <label htmlFor="tribe-creater" className="form-label" /> */}
+          <label htmlFor="tribe-creater" className="form-label" />
           <input
             type="text"
             className="form-control"

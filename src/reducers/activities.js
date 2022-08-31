@@ -1,5 +1,5 @@
 import {
-  CLEAN_INPUT_FORM,
+  CLEAN_INPUT_FORM_ACTIVITIES,
   SAVE_DATE_ACTIVITY,
   SAVE_DURATION_ACTIVITY,
   SAVE_HOURLY_ACTIVITY,
@@ -56,7 +56,7 @@ function reducer(state = initialState, action = {}) {
         ...state,
         moreActivity: action.value,
       };
-    case CLEAN_INPUT_FORM:
+    case CLEAN_INPUT_FORM_ACTIVITIES:
       return {
         ...state,
         moreActivity: '',

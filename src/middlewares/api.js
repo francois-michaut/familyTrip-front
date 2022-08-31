@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { POST_ACTIVITY, cleanInputForm } from '../actions/activity';
+import { POST_ACTIVITY, cleanInputFormActivities } from '../actions/activity';
+import { cleanInputFormRemember, POST_REMEMBER } from '../actions/remember';
 
 import {
   GET_TRIBES,
@@ -55,9 +56,6 @@ const apiMiddleware = (store) => (next) => (action) => {
           {
             tribeName: tribeName,
           },
-          // {
-          //   'Content-Type': 'application/json',
-          // },
         )
         .then((response) => {
           const tribe = response.config.data;
@@ -96,7 +94,36 @@ const apiMiddleware = (store) => (next) => (action) => {
         )
         .then((response) => {
           console.log(response.config.data);
-          store.dispatch(cleanInputForm());
+          store.dispatch(cleanInputFormActivities());
+        })
+        .catch(() => {
+          console.log('erreur Api');
+        });
+      next(action);
+      break;
+    }
+    case POST_REMEMBER: {
+      const state = store.getState();
+      const {
+        dateRemember,
+        locationRemember,
+        membersRemember,
+        nameRemember,
+      } = state.remember;
+      console.log(dateRemember);
+      axiosInstance
+        .post(
+          'Api/createRememberPost',
+          {
+            locationRemember: locationRemember,
+            dateRemember: dateRemember,
+            membersRemember: membersRemember,
+            nameRemember: nameRemember,
+          },
+        )
+        .then((response) => {
+          console.log(response.config);
+          store.dispatch(cleanInputFormRemember());
         })
         .catch(() => {
           console.log('erreur Api');
