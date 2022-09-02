@@ -1,29 +1,60 @@
 // Import
+import { useDispatch, useSelector } from 'react-redux';
+import { addIngredient, saveIngredientShoppingList } from '../../actions/shoppingList';
 import './shopping.scss';
 
 // Composant
 function Shopping() {
+  const dispatch = useDispatch();
+  const currentIngredient = useSelector((state) => state.shoppingList.currentIngredient);
+  const ingredientArray = useSelector((state) => state.shoppingList.ingredientArray);
+  // const moreThanTenIngredients = ingredientArray.splice(10);
+
+  function handleSaveIngredient(evt) {
+    dispatch(saveIngredientShoppingList(evt.target.value));
+  }
+  function handleAddIngredient() {
+    ingredientArray.push(currentIngredient);
+    dispatch(addIngredient(ingredientArray));
+    // if (ingredientArray.length < 11) {
+    //   ingredientArray.push(currentIngredient);
+    //   dispatch(addIngredient(ingredientArray));
+    // }
+    // else {
+    //   moreThanTenIngredients.push(currentIngredient);
+    //   dispatch(addIngredient(moreThanTenIngredients));
+    // }
+  }
   return (
     <main className="shopping">
       <h2 className="shopping__title">Créer une liste de courses</h2>
       <div className="shopping__list">
         <div className="mb-3">
-          <input type="text" className="form-control" id="activity-type" placeholder="1er ingrédient" />
+          <input
+            type="text"
+            className="form-control"
+            id="shoppingList-input"
+            placeholder="Ingrédient"
+            value={currentIngredient}
+            onChange={handleSaveIngredient}
+          />
         </div>
-        <div className="mb-3">
-          <input type="text" className="form-control" id="activity-type" placeholder="2e ingrédient" />
-        </div>
-        <div className="mb-3">
-          <input type="text" className="form-control" id="activity-type" placeholder="3e ingrédient" />
-        </div>
-        <div className="mb-3">
-          <input type="text" className="form-control" id="activity-type" placeholder="4e ingrédient" />
-        </div>
-        <div className="mb-3">
-          <input type="text" className="form-control" id="activity-type" placeholder="5e ingrédient" />
+        <h3 className="shopping__list__title">Résumé de votre liste de courses</h3>
+        <div className="mb-3 shopping__list--resume">
+          <ul className="resume__list">
+            {ingredientArray && ingredientArray.map((ingredient) => (
+              <li className="resume__list__item" key={ingredient}>{ingredient}</li>
+            ))}
+          </ul>
+          {/* <ul className="resume__list">
+            {ingredientArray
+            && ingredientArray.splice(10).map((ingredient) => (
+              <li className="resume__list__item" key={ingredient}>{ingredient}</li>
+            ))}
+          </ul> */}
         </div>
         <div className="shopping__list__buttons">
-          <button className=" btn btn-primary" type="button">Ajouter un ingrédient</button>
+          <button className=" btn btn-primary" type="button" onClick={handleAddIngredient}>Ajouter un ingrédient</button>
           <button className=" btn btn-success" type="submit">Valider la liste</button>
         </div>
       </div>

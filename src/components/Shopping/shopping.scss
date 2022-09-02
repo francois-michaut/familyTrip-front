@@ -21,11 +21,51 @@
   }
   &__list {
     margin-top: 20px;
+    &__title {
+      text-transform: uppercase;
+      border: 2px solid grey;
+      padding: 6px;
+      border-radius: 20px;
+      background-color: grey;
+      color: white;
+      width: 60%;
+      margin: 24px auto;
+      @media screen and (min-width:1400px){
+        margin-top: 24px;
+        width: 30%;
+        padding: 6px;
+      }
+    }
     &__buttons {
-      margin: 8px;
+      margin: 24px;
       .btn {
         margin: 8px;
       }
+    }
+    &--resume {
+      border: 2px solid grey;
+      height: 300px;
+      padding: 16px;
+      width: 40%;
+      margin: 50px auto;
+      overflow-y: scroll;
+      scrollbar-color: rebeccapurple green;
+      scrollbar-width: thin;
+    }
+  }
+}
+.resume__list {
+  margin: 16px;
+  padding: 8px;
+  &__item {
+    width: 60%;
+    margin:4px auto;
+    background-color: rgb(11, 15, 14);
+    color: white;
+    border-radius: 20px;
+    padding: 8px;
+    @media screen and (min-width: 1400px){
+      width:40%;
     }
   }
 }
