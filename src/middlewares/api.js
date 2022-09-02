@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { POST_ACTIVITY, cleanInputFormActivities } from '../actions/activity';
 import { cleanInputFormRemember, POST_REMEMBER } from '../actions/remember';
-import { POST_SHOPPING_LIST } from '../actions/shoppingList';
+import { emptyShoppingList, POST_SHOPPING_LIST } from '../actions/shoppingList';
 
 import {
   cleanTribeInput,
@@ -83,6 +83,7 @@ const apiMiddleware = (store) => (next) => (action) => {
         )
         .then((response) => {
           console.log(response.config.data);
+          store.dispatch(emptyShoppingList());
         })
         .catch((error) => {
           console.log(error);

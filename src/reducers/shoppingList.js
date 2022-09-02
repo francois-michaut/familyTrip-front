@@ -1,4 +1,4 @@
-import { ADD_INGREDIENT, SAVE_INGREDIENT_SHOPPING_LIST } from '../actions/shoppingList';
+import { ADD_INGREDIENT, EMPTY_SHOPPING_LIST, SAVE_INGREDIENT_SHOPPING_LIST } from '../actions/shoppingList';
 
 export const initialState = {
   ingredientArray: [],
@@ -16,6 +16,12 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         ingredientArray: action.value,
+        currentIngredient: '',
+      };
+    case EMPTY_SHOPPING_LIST:
+      return {
+        ...state,
+        ingredientArray: '',
         currentIngredient: '',
       };
     default:

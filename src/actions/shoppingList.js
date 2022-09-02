@@ -23,3 +23,11 @@ export const POST_SHOPPING_LIST = 'POST_SHOPPING_LIST';
 export const postShoppingList = () => ({
   type: POST_SHOPPING_LIST,
 });
+
+// ACTION TYPE EMPTY_SHOPPING_LIST
+export const EMPTY_SHOPPING_LIST = 'EMPTY_SHOPPING_LIST';
+
+// ACTION CREATOR emptyShoppingList
+export const emptyShoppingList = () => ({
+  type: EMPTY_SHOPPING_LIST,
+});
