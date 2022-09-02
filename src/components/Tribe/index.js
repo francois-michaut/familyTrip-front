@@ -48,7 +48,7 @@ function Tribe() {
           <select className="form-control" name="pets" id="pet-select">
             <option value="">Choisisssez une tribu</option>
             {tribesList && tribesList.map((tribe) => (
-              <option value="dog" key={tribe.id}>{tribe.name}</option>
+              <option className="form-control__select" value="dog" key={tribe.id}>{tribe.name}</option>
             ))}
           </select>
         </div>

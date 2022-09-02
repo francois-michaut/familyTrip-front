@@ -48,3 +48,11 @@ export const saveTribes = (tribes) => ({
   type: SAVE_TRIBES,
   tribes,
 });
+
+// ACTION TYPE CLEAN_TRIBE_INPUT
+export const CLEAN_TRIBE_INPUT = 'CLEAN_TRIBE_INPUT';
+
+// ACTION CREATOR cleanTribeInput
+export const cleanTribeInput = () => ({
+  type: CLEAN_TRIBE_INPUT,
+});

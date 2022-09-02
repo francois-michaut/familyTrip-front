@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { POST_ACTIVITY, cleanInputFormActivities } from '../actions/activity';
 import { cleanInputFormRemember, POST_REMEMBER } from '../actions/remember';
+import { POST_SHOPPING_LIST } from '../actions/shoppingList';
 
 import {
+  cleanTribeInput,
   GET_TRIBES,
   GET_USER,
   loadUsers,
@@ -59,11 +61,31 @@ const apiMiddleware = (store) => (next) => (action) => {
         )
         .then((response) => {
           const tribe = response.config.data;
-
+          store.dispatch(cleanTribeInput());
           console.log(tribe);
         })
         .catch(() => {
           console.log('erreur API');
+        });
+      next(action);
+      break;
+    }
+    case POST_SHOPPING_LIST: {
+      const state = store.getState();
+      const ingredientArray = state.shoppingList;
+      console.log(ingredientArray);
+      axiosInstance
+        .post(
+          'Api/createShoppingListPost',
+          {
+            list: ingredientArray,
+          },
+        )
+        .then((response) => {
+          console.log(response.config.data);
+        })
+        .catch((error) => {
+          console.log(error);
         });
       next(action);
       break;

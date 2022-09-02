@@ -1,4 +1,4 @@
-import { SAVE_TRIBES, SAVE_TRIBE_NAME } from '../actions/users';
+import { CLEAN_TRIBE_INPUT, SAVE_TRIBES, SAVE_TRIBE_NAME } from '../actions/users';
 
 export const initialState = {
   tribeName: '',
@@ -16,6 +16,11 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         tribesList: action.tribes,
+      };
+    case CLEAN_TRIBE_INPUT:
+      return {
+        ...state,
+        tribeName: '',
       };
     default:
       return state;

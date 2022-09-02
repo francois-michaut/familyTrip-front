@@ -1,6 +1,6 @@
 // Import
 import { useDispatch, useSelector } from 'react-redux';
-import { addIngredient, saveIngredientShoppingList } from '../../actions/shoppingList';
+import { addIngredient, postShoppingList, saveIngredientShoppingList } from '../../actions/shoppingList';
 import './shopping.scss';
 
 // Composant
@@ -16,19 +16,15 @@ function Shopping() {
   function handleAddIngredient() {
     ingredientArray.push(currentIngredient);
     dispatch(addIngredient(ingredientArray));
-    // if (ingredientArray.length < 11) {
-    //   ingredientArray.push(currentIngredient);
-    //   dispatch(addIngredient(ingredientArray));
-    // }
-    // else {
-    //   moreThanTenIngredients.push(currentIngredient);
-    //   dispatch(addIngredient(moreThanTenIngredients));
-    // }
+  }
+  function handleSubmitShoppingList(evt) {
+    evt.preventDefault();
+    dispatch(postShoppingList());
   }
   return (
     <main className="shopping">
       <h2 className="shopping__title">Créer une liste de courses</h2>
-      <div className="shopping__list">
+      <form className="shopping__list" onSubmit={handleSubmitShoppingList}>
         <div className="mb-3">
           <input
             type="text"
@@ -46,18 +42,12 @@ function Shopping() {
               <li className="resume__list__item" key={ingredient}>{ingredient}</li>
             ))}
           </ul>
-          {/* <ul className="resume__list">
-            {ingredientArray
-            && ingredientArray.splice(10).map((ingredient) => (
-              <li className="resume__list__item" key={ingredient}>{ingredient}</li>
-            ))}
-          </ul> */}
         </div>
         <div className="shopping__list__buttons">
           <button className=" btn btn-primary" type="button" onClick={handleAddIngredient}>Ajouter un ingrédient</button>
           <button className=" btn btn-success" type="submit">Valider la liste</button>
         </div>
-      </div>
+      </form>
     </main>
   );
 }

@@ -15,3 +15,11 @@ export const saveIngredientShoppingList = (value) => ({
   type: SAVE_INGREDIENT_SHOPPING_LIST,
   value,
 });
+
+// ACTION TYPE POST_SHOPPING_LIST
+export const POST_SHOPPING_LIST = 'POST_SHOPPING_LIST';
+
+// ACTION CREATOR postShoppingList
+export const postShoppingList = () => ({
+  type: POST_SHOPPING_LIST,
+});

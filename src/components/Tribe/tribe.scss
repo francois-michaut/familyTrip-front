@@ -32,3 +32,8 @@
     margin-bottom: 100px ;
   }
 }
+.form-control {
+  &__select {
+    text-transform:capitalize;
+  }
+}
