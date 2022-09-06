@@ -24,6 +24,7 @@ function Header() {
         </div>
         <div className="connexionBlock">
           <img className="avatar" src={logoAvatar} alt="avatar " />
+          <a className="nav-link" href="/Connexion">Se connecter</a>
         </div>
 
       </div>

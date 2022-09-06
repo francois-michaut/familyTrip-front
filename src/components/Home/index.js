@@ -7,8 +7,10 @@ import MainPage from '../MainPage';
 import Shopping from '../Shopping';
 import Remember from '../Remember';
 import MyTribe from '../MyTribe';
-import './styles.css';
 import Tribe from '../Tribe';
+import Connection from '../Connection';
+
+import './styles.css';
 
 // == Composant
 function Home() {
@@ -22,6 +24,7 @@ function Home() {
         <Route path="/Remember" element={<Remember />} />
         <Route path="/Tribe" element={<Tribe />} />
         <Route path="/MyTribe" element={<MyTribe />} />
+        <Route path="/Connexion" element={<Connection />} />
       </Routes>
       <Footer />
     </div>
