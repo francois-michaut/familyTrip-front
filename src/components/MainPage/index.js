@@ -25,7 +25,7 @@ function MainPage() {
           <img src={shoppingImage} className="card-img-top" alt="salade préparée" />
           <div className="card-body">
             <a href="/Shopping" className="btn btn-primary">Créez une liste de shopping</a>
-            <p className="card-text p-2">Plus besoin de post-it, plus de liste oubliée... paratgez avec vos amis et ayez tout le temps sur vous le menu de ce soir!</p>
+            <p className="card-text p-2">Plus besoin de post-it, plus de liste oubliée... partagez avec vos amis et ayez tout le temps sur vous le menu de ce soir!</p>
           </div>
         </div>
       </div>
