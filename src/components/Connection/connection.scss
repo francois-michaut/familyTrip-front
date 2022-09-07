@@ -1,10 +1,15 @@
 .connection {
   margin: 40px;
+  text-align: center;
+
   &__title {
-    text-align: center;
     margin: 30px;
     font-family: 'Bangers', cursive;
     font-size: 2rem;
-
   }
+}
+
+.form-control {
+  width: 20%;
+  margin: 20px auto ;
 }
