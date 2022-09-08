@@ -64,7 +64,7 @@ function Activity() {
           <label htmlFor="activity-type" className="form-label">Type d'activités</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control activity__input"
             id="activity-type"
             placeholder="randonnée"
             onChange={handleTypeActivity}

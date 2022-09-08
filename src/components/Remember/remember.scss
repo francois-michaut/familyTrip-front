@@ -1,5 +1,7 @@
 .remember {
   margin-top: 20px;
+  text-align: center;
+
   &__title {
     width: 60%;
     margin-left: auto;
@@ -28,5 +30,6 @@
   }
 }
 .input-group, .form-label  {
+  width: 80%;
   padding: 6px 0px;
 }
