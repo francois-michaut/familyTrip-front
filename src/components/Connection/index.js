@@ -1,6 +1,6 @@
 // Import
 import { useDispatch, useSelector } from 'react-redux';
-import { saveUserEmail, saveUserName, saveUserPassword } from '../../actions/users';
+import { saveCurrentUser, saveUserEmail, saveUserName, saveUserPassword } from '../../actions/users';
 import './connection.scss';
 
 function Connection() {
@@ -8,6 +8,7 @@ function Connection() {
   const userEmail = useSelector((state) => state.users.userEmail);
   const userPassword = useSelector((state) => state.users.userPassword);
   const dispatch = useDispatch();
+
   function handleUserNameInput(evt){
     dispatch(saveUserName(evt.target.value));
   } 
@@ -18,6 +19,10 @@ function Connection() {
 
   function handlePasswordInput(evt){
     dispatch(saveUserPassword(evt.target.value));
+  } 
+
+  function handleSubmitUser(){
+    dispatch(saveCurrentUser());
   } 
   return (
     <main className="connection">
@@ -54,7 +59,7 @@ function Connection() {
           />
         </div>
       </div>
-      <button type="submit" className="connection__button btn btn-success ">Se connecter</button>
+      <button type="submit" className="connection__button btn btn-success " onClick={handleSubmitUser}>Se connecter</button>
     </main>
   );
 }

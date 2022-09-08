@@ -10,6 +10,7 @@ import {
   loadUsers,
   POST_TRIBE_NAME,
   saveTribes,
+  SAVE_CURRENT_USER,
 } from '../actions/users';
 
 const axiosInstance = axios.create({
@@ -125,6 +126,28 @@ const apiMiddleware = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    case SAVE_CURRENT_USER:{
+      const state = store.getState();
+      const{ userName, userEmail, userPassword } = state.users; 
+      console.log(userName , userEmail , userPassword);
+      axiosInstance
+        .post(
+          'Api/userPost',
+         {
+          userName: userName,
+          userEamil: userEmail,
+          userPassword: userPassword,
+         }, 
+        )
+        .then((response) =>{
+          console.log(response.config.data);
+        })
+        .catch(() =>{
+          console.log('erreur API');
+        });
+        next(action);
+        break;
+    } 
     case POST_REMEMBER: {
       const state = store.getState();
       const {
