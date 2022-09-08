@@ -137,7 +137,7 @@ const apiMiddleware = (store) => (next) => (action) => {
           'Api/userPost',
          {
           userName: userName,
-          userEamil: userEmail,
+          userEmail: userEmail,
           userPassword: userPassword,
          }, 
         )
