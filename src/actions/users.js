@@ -56,3 +56,30 @@ export const CLEAN_TRIBE_INPUT = 'CLEAN_TRIBE_INPUT';
 export const cleanTribeInput = () => ({
   type: CLEAN_TRIBE_INPUT,
 });
+
+// ACTION TYPE SAVE_USER_NAME
+export const SAVE_USER_NAME = 'SAVE_USER_NAME';
+
+// ACTION CREATOR saveUserName
+export const saveUserName = (value) => ({
+  type: SAVE_USER_NAME,
+  value,
+});
+// ACTION TYPE SAVE_USER_EMAIL
+export const SAVE_USER_EMAIL = 'SAVE_USER_EMAIL';
+
+// ACTION CREATOR saveUserEmail
+export const saveUserEmail = (value) => ({
+  type: SAVE_USER_EMAIL,
+  value,
+});
+// ACTION TYPE SAVE_USER_PASSWORD
+export const SAVE_USER_PASSWORD = 'SAVE_USER_PASSWORD';
+
+// ACTION CREATOR saveUserPassword
+export const saveUserPassword = (value) => ({
+  type: SAVE_USER_PASSWORD,
+  value,
+});
+
+
