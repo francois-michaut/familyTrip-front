@@ -1,15 +1,18 @@
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
 import { POST_ACTIVITY, cleanInputFormActivities } from '../actions/activity';
 import { cleanInputFormRemember, POST_REMEMBER } from '../actions/remember';
 import { emptyShoppingList, POST_SHOPPING_LIST } from '../actions/shoppingList';
 
 import {
+  cleanCurrentUser,
   cleanTribeInput,
   GET_TRIBES,
   GET_USER,
   loadUsers,
   POST_TRIBE_NAME,
   saveTribes,
+  SAVE_CURRENT_USER,
 } from '../actions/users';
 
 const axiosInstance = axios.create({
@@ -125,6 +128,29 @@ const apiMiddleware = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    case SAVE_CURRENT_USER:{
+      const state = store.getState();
+      const{ userName, userEmail, userPassword } = state.users; 
+      console.log(userName , userEmail , userPassword);
+      axiosInstance
+        .post(
+          'Api/userPost',
+         {
+          userName: userName,
+          userEamil: userEmail,
+          userPassword: userPassword,
+         }, 
+        )
+        .then((response) =>{
+          console.log(response.config.data);
+          store.dispatch(cleanCurrentUser());
+        })
+        .catch(() =>{
+          console.log('erreur API');
+        });
+        next(action);
+        break;
+    } 
     case POST_REMEMBER: {
       const state = store.getState();
       const {

@@ -1,7 +1,29 @@
 // Import
+import { useDispatch, useSelector } from 'react-redux';
+import { saveCurrentUser, saveUserEmail, saveUserName, saveUserPassword } from '../../actions/users';
 import './connection.scss';
 
 function Connection() {
+  const userName = useSelector((state) => state.users.userName);
+  const userEmail = useSelector((state) => state.users.userEmail);
+  const userPassword = useSelector((state) => state.users.userPassword);
+  const dispatch = useDispatch();
+
+  function handleUserNameInput(evt){
+    dispatch(saveUserName(evt.target.value));
+  } 
+
+  function handleEmailInput(evt){
+    dispatch(saveUserEmail(evt.target.value));
+  } 
+
+  function handlePasswordInput(evt){
+    dispatch(saveUserPassword(evt.target.value));
+  } 
+
+  function handleSubmitUser(){
+    dispatch(saveCurrentUser());
+  } 
   return (
     <main className="connection">
       <h2 className="connection__title">Connexion/Création de compte</h2>
@@ -12,9 +34,8 @@ function Connection() {
             type="text"
             className="form-control"
             id="user-name"
-            // placeholder="votre pseudo"
-            value=""
-            // onChange={}
+            onChange={handleUserNameInput}
+            value={userName}
           />
         </div>
         <div className="mb-3">
@@ -23,24 +44,22 @@ function Connection() {
             type="text"
             className="form-control"
             id="user-email"
-            // placeholder="votre pseudo"
-            value=""
-            // onChange={}
+            value={userEmail}
+            onChange={handleEmailInput}
           />
         </div>
         <div className="mb-3">
           <label htmlFor="user-password" className="form-label">Votre password</label>
           <input
-            type="text"
+            type="password"
             className="form-control"
             id="user-password"
-            // placeholder="votre pseudo"
-            value=""
-            // onChange={}
+            value={userPassword}
+            onChange={handlePasswordInput}
           />
         </div>
       </div>
-      <button type="submit" className="connection__button btn btn-success ">Se connecter</button>
+      <button type="submit" className="connection__button btn btn-success " onClick={handleSubmitUser}>Se connecter</button>
     </main>
   );
 }
