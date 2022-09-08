@@ -1,9 +1,11 @@
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
 import { POST_ACTIVITY, cleanInputFormActivities } from '../actions/activity';
 import { cleanInputFormRemember, POST_REMEMBER } from '../actions/remember';
 import { emptyShoppingList, POST_SHOPPING_LIST } from '../actions/shoppingList';
 
 import {
+  cleanCurrentUser,
   cleanTribeInput,
   GET_TRIBES,
   GET_USER,
@@ -141,6 +143,7 @@ const apiMiddleware = (store) => (next) => (action) => {
         )
         .then((response) =>{
           console.log(response.config.data);
+          store.dispatch(cleanCurrentUser());
         })
         .catch(() =>{
           console.log('erreur API');

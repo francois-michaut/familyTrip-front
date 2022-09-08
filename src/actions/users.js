@@ -90,4 +90,12 @@ export const saveCurrentUser = () => ({
   type: SAVE_CURRENT_USER,
 });
 
+// / ACTION TYPE CLEAN_CURRENT_USER
+export const CLEAN_CURRENT_USER = 'CLEAN_CURRENT_USER';
+
+// ACTION CREATOR cleanCurrentUser
+export const cleanCurrentUser = () => ({
+  type: CLEAN_CURRENT_USER,
+});
+
 

@@ -1,4 +1,5 @@
 import {
+  CLEAN_CURRENT_USER,
   LOAD_USERS, SAVE_USER_EMAIL, SAVE_USER_NAME, SAVE_USER_PASSWORD,
 } from '../actions/users';
 
@@ -30,6 +31,13 @@ function reducer(state = initialState, action = {}) {
       return{
         ...state,
         userPassword: action.value,
+      } ;
+    case CLEAN_CURRENT_USER:
+      return{
+        ...state,
+        userEmail: '',
+        userName: '',
+        userPassword: '',
       } ;
     default:
       return state;
