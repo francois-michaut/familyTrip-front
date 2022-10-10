@@ -19,6 +19,7 @@ const axiosInstance = axios.create({
   baseURL: 'http://localhost:3000/',
 });
 
+// const headerSend = header: "Content-Type: application/json" ;
 const apiMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case GET_USER: {
@@ -58,17 +59,21 @@ const apiMiddleware = (store) => (next) => (action) => {
       axiosInstance
         .post(
           'Api/createTribePost',
-          {
+          // {
+          //   headers: { 'Content-Type': 'application/json' },
+          // },
+          JSON.stringify({
             tribeName: tribeName,
-          },
+          }),
         )
         .then((response) => {
           const tribe = response.config.data;
           store.dispatch(cleanTribeInput());
           console.log(tribe);
         })
-        .catch(() => {
+        .catch((error) => {
           console.log('erreur API');
+          console.log(error);
         });
       next(action);
       break;
@@ -80,9 +85,9 @@ const apiMiddleware = (store) => (next) => (action) => {
       axiosInstance
         .post(
           'Api/createShoppingListPost',
-          {
+          JSON.stringify({
             list: ingredientArray,
-          },
+          }),
         )
         .then((response) => {
           console.log(response.config.data);
@@ -108,7 +113,7 @@ const apiMiddleware = (store) => (next) => (action) => {
       axiosInstance
         .post(
           'Api/createActivityPost',
-          {
+          JSON.stringify({
             typeActivity: typeActivity,
             dateActivity: dateActivity,
             durationActivity: durationActivity,
@@ -116,7 +121,7 @@ const apiMiddleware = (store) => (next) => (action) => {
             locationActivity: locationActivity,
             membersActivity: membersActivity,
             moreActivity: moreActivity,
-          },
+          }),
         )
         .then((response) => {
           console.log(response.config.data);
@@ -128,29 +133,29 @@ const apiMiddleware = (store) => (next) => (action) => {
       next(action);
       break;
     }
-    case SAVE_CURRENT_USER:{
+    case SAVE_CURRENT_USER: {
       const state = store.getState();
-      const{ userName, userEmail, userPassword } = state.users; 
-      console.log(userName , userEmail , userPassword);
+      const { userName, userEmail, userPassword } = state.users;
+      console.log(userName, userEmail, userPassword);
       axiosInstance
         .post(
           'Api/userPost',
-         {
-          userName: userName,
-          userEmail: userEmail,
-          userPassword: userPassword,
-         }, 
+          JSON.stringify({
+            userName: userName,
+            userEmail: userEmail,
+            userPassword: userPassword,
+          }),
         )
-        .then((response) =>{
+        .then((response) => {
           console.log(response.config.data);
           store.dispatch(cleanCurrentUser());
         })
-        .catch(() =>{
+        .catch(() => {
           console.log('erreur API');
         });
-        next(action);
-        break;
-    } 
+      next(action);
+      break;
+    }
     case POST_REMEMBER: {
       const state = store.getState();
       const {
@@ -163,12 +168,12 @@ const apiMiddleware = (store) => (next) => (action) => {
       axiosInstance
         .post(
           'Api/createRememberPost',
-          {
+          JSON.stringify({
             locationRemember: locationRemember,
             dateRemember: dateRemember,
             membersRemember: membersRemember,
             nameRemember: nameRemember,
-          },
+          }),
         )
         .then((response) => {
           console.log(response.config);
