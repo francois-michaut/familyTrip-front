@@ -2,13 +2,21 @@
   margin: 40px;
   text-align: center;
   width: 80%;
-  margin: 0 auto;
+  margin:  auto;
   height: 500px;
-
   &__title {
     margin: 30px;
     font-family: 'Bangers', cursive;
     font-size: 2rem;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0px auto;
+  }
+  &__buttons button {
+    margin:  16px 0;
   }
 }
 

@@ -55,10 +55,11 @@
   }
 }
 .resume__list {
-  margin: 16px auto;
+  width: 90%;
+  margin: 0px auto;
   padding: 8px;
   &__item {
-    width: 100px;
+    width: 100%;
     margin:4px auto;
     background-color: rgb(11, 15, 14);
     color: white;

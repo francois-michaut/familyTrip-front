@@ -45,10 +45,10 @@ function Tribe() {
             htmlFor="tribe-finder"
             className="form-label"
           />
-          <select className="form-control" name="pets" id="pet-select">
-            <option value="">Choisisssez une tribu</option>
+          <select className="form-control" name="tribes" id="tribe-select">
+            <option value="">Choisissez une tribu</option>
             {tribesList && tribesList.map((tribe) => (
-              <option className="form-control__select" value="dog" key={tribe.id}>{tribe.name}</option>
+              <option className="form-control__select" value="tribe" key={tribe.id}>{tribe.name}</option>
             ))}
           </select>
         </div>

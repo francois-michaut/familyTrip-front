@@ -32,8 +32,13 @@
     margin-bottom: 100px ;
   }
 }
-.form-control {
-  &__select {
-    text-transform:capitalize;
-  }
+// .form-control {
+//   &__select {
+//     text-transform:capitalize;
+//   }
+// }
+
+#tribe-select, #tribe-creater {
+  font-size: 0.9em;
+  font-weight: 200;
 }

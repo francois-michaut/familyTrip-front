@@ -7,7 +7,7 @@ import './shopping.scss';
 // Composant
 function Shopping() {
   const dispatch = useDispatch();
-  const input = useRef(null);
+  const ref = useRef(null);
   const currentIngredient = useSelector((state) => state.shoppingList.currentIngredient);
   const ingredientArray = useSelector((state) => state.shoppingList.ingredientArray);
   // const moreThanTenIngredients = ingredientArray.splice(10);
@@ -18,7 +18,7 @@ function Shopping() {
   function handleAddIngredient() {
     ingredientArray.push(currentIngredient);
     dispatch(addIngredient(ingredientArray));
-    input.current.focus();
+    ref.current.focus();
   }
   function handleSubmitShoppingList(evt) {
     evt.preventDefault();
@@ -36,7 +36,7 @@ function Shopping() {
             placeholder="Ingrédient"
             value={currentIngredient}
             onChange={handleSaveIngredient}
-            ref={input}
+            ref={ref}
           />
         </div>
         <h3 className="shopping__list__title">Résumé de votre liste de courses</h3>
