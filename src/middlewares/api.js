@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
 import { POST_ACTIVITY, cleanInputFormActivities } from '../actions/activity';
 import { cleanInputFormRemember, POST_REMEMBER } from '../actions/remember';
 import { emptyShoppingList, POST_SHOPPING_LIST } from '../actions/shoppingList';

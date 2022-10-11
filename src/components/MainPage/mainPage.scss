@@ -1,28 +1,12 @@
-// main {
-//   background: linear-gradient(220deg, rgb(41, 243, 41), rgb(255, 55, 19));
-//   width: 100%;
-// }
+
 .main__title {
   font-size: larger;
   text-align: center;
   padding: 8px;
+  margin: 16px;
 }
-.category {
-  width: 80%;
-  height: 200px;
-  /* border: 2px solid gray; */
-  border-radius: 4px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.card-title {
-  font-size: larger;
-  color: white;
-}
+
+
 .card-img-top {
   height: 200px;
 }
