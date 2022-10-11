@@ -1,4 +1,5 @@
 // Import
+import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addIngredient, postShoppingList, saveIngredientShoppingList } from '../../actions/shoppingList';
 import './shopping.scss';
@@ -6,6 +7,7 @@ import './shopping.scss';
 // Composant
 function Shopping() {
   const dispatch = useDispatch();
+  const ref = useRef(null);
   const currentIngredient = useSelector((state) => state.shoppingList.currentIngredient);
   const ingredientArray = useSelector((state) => state.shoppingList.ingredientArray);
   // const moreThanTenIngredients = ingredientArray.splice(10);
@@ -16,6 +18,7 @@ function Shopping() {
   function handleAddIngredient() {
     ingredientArray.push(currentIngredient);
     dispatch(addIngredient(ingredientArray));
+    ref.current.focus();
   }
   function handleSubmitShoppingList(evt) {
     evt.preventDefault();
@@ -33,6 +36,7 @@ function Shopping() {
             placeholder="Ingrédient"
             value={currentIngredient}
             onChange={handleSaveIngredient}
+            ref={ref}
           />
         </div>
         <h3 className="shopping__list__title">Résumé de votre liste de courses</h3>
