@@ -8,7 +8,7 @@
   }
   &__members, &__shoppingList, &__remembers, &__activities {
     border: 2px solid rgb(8, 194, 79);
-    border-radius: 20px;
+    border-radius: 10px 100px 40px 185px;
     height: 250px;
     padding: 16px;
     margin: 20px;
@@ -26,7 +26,7 @@
   }
 }
 
-.row {
-  margin: 40px;
-}
+// .row {
+//   margin: 40px;
+// }
 
