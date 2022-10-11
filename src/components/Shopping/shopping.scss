@@ -46,7 +46,7 @@
       border: 2px solid grey;
       height: 300px;
       padding: 16px;
-      width: 40%;
+      width: 60%;
       margin: 50px auto;
       overflow-y: scroll;
       scrollbar-color: rebeccapurple green;
@@ -55,10 +55,10 @@
   }
 }
 .resume__list {
-  margin: 16px;
+  margin: 16px auto;
   padding: 8px;
   &__item {
-    width: 60%;
+    width: 100px;
     margin:4px auto;
     background-color: rgb(11, 15, 14);
     color: white;
