@@ -31,7 +31,7 @@ function Shopping() {
         <div className="mb-3">
           <input
             type="text"
-            className="form-control"
+            className="form-control input-shoppingList"
             id="shoppingList-input"
             placeholder="Ingrédient"
             value={currentIngredient}
@@ -45,7 +45,7 @@ function Shopping() {
         <div className="mb-3 shopping__list--resume">
           <ul className="resume__list">
             {ingredientArray && ingredientArray.map((ingredient) => (
-              <li className="resume__list__item" key={ingredient}>{ingredient}</li>
+              <li className="resume__list__item " key={ingredient}>{ingredient}</li>
             ))}
           </ul>
         </div>
