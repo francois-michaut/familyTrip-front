@@ -36,8 +36,10 @@ function Shopping() {
             placeholder="Ingrédient"
             value={currentIngredient}
             onChange={handleSaveIngredient}
+            onSubmit={handleAddIngredient}
             ref={ref}
           />
+          <button className="shopping__input--button btn btn-primary" type="button" onClick={handleAddIngredient}>Valider l'ingrédient</button>
         </div>
         <h3 className="shopping__list__title">Résumé de votre liste de courses</h3>
         <div className="mb-3 shopping__list--resume">
@@ -48,7 +50,6 @@ function Shopping() {
           </ul>
         </div>
         <div className="shopping__list__buttons">
-          <button className=" btn btn-primary" type="button" onClick={handleAddIngredient}>Ajouter un ingrédient</button>
           <button className=" btn btn-success" type="submit">Valider la liste</button>
         </div>
       </form>
