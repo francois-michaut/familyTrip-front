@@ -1,13 +1,26 @@
 .header {
   background-color: white;
+  
   &__title {
       font-family: 'Bangers', cursive;
       font-size:3rem;
+      
       @media screen and (min-width:1400px){
         font-size: 4rem;
               }
     }
+  &__logos {
+    display: flex;
+  }
 }
+.image__logo {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  right: 200px;
+  bottom: 30px;
+}
+
 .connexionBlock {
   position:absolute;
   top: 8px;
@@ -24,7 +37,7 @@
 }
 .navbar-log {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 8px;
   height: 80px;
 }

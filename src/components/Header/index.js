@@ -3,6 +3,7 @@
 import './header.scss';
 
 import logoAvatar from 'src/assets/images/kisspng-computer-icons-avatar-login-user-avatar-5ac207e6c8c133.5629676315226654468223.png';
+import logoSite from 'src/assets/images/logoFamilytrip.png';
 import { NavLink } from 'react-router-dom';
 
 // Composant
@@ -22,11 +23,12 @@ function Header() {
             <NavLink className="dropdown-item" to="/Tribe">Tribe Creation</NavLink>
           </div>
         </div>
-        <div className="connexionBlock">
-          <img className="avatar" src={logoAvatar} alt="avatar " />
-          <a className="nav-link" href="/Connexion">Se connecter</a>
+        <div className="header__logos">
+          <div className="connexionBlock">
+            <img className="avatar" src={logoAvatar} alt="avatar " />
+            <a className="nav-link" href="/Connexion">Se connecter</a>
+          </div>
         </div>
-
       </div>
       <h1 className="text-center header__title m-2"><a href="/">FAMILY TRIP</a></h1>
       <nav className="navbar bg-dark d-none d-lg-block navbar-expand-lg bg-light my-2">
