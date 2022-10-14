@@ -1,7 +1,5 @@
 .header {
-
-  background-color: white;
-  // margin-bottom: 40px;
+  // width:80%;
   &__title {
     @media screen and (max-width:1024px) {
       display: none;
@@ -39,6 +37,10 @@
       position: relative;
       left: 350px;
     }
+    @media screen and (min-width:1440px) {
+      position: relative;
+      left: 500px;
+    }
    
   }
 }
@@ -67,7 +69,7 @@
 .navbar-log {
   display: flex;
   justify-content: space-around;
-  margin: 8px;
+  // margin: 8px;
   height: 80px;
 }
 .avatar {
