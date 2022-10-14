@@ -1,17 +1,61 @@
 .header {
-  background-color: white;
+  // width:80%;
   &__title {
-      font-family: 'Bangers', cursive;
-      font-size:3rem;
-      @media screen and (min-width:1400px){
-        font-size: 4rem;
-              }
+    @media screen and (max-width:1024px) {
+      display: none;
     }
+    @media screen and (min-width:1024px) {
+      font-family: "Bangers", cursive;
+      text-align: center;
+      display: block;
+      font-size: 3rem;
+    }
+  }
+  &__titleLogos {
+    height: 130px;
+    @media screen and (min-width:1024px) {
+      height: 80px;
+    }
+  }
+  &__title--img {
+      position: relative;
+      bottom: 170px;
+      width: 300px;
+      @media  screen and (min-width:1024px) {
+        display: none;
+      }
+    }
+  &__logos {
+    display: flex;
+    position: relative;
+    left: 12px;
+    @media screen and (min-width:768px) {
+      position: relative;
+      left: 80px;
+    }
+    @media screen and (min-width:1024px) {
+      position: relative;
+      left: 350px;
+    }
+    @media screen and (min-width:1440px) {
+      position: relative;
+      left: 500px;
+    }
+   
+  }
 }
+.image__logo {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  right: 200px;
+  bottom: 30px;
+}
+
 .connexionBlock {
-  position:absolute;
-  top: 8px;
-  right: 8px;
+  position:relative;
+  top: 2px;
+  left: 60px;
   text-align: center;
 }
 .dropdown-toggle {
@@ -24,8 +68,8 @@
 }
 .navbar-log {
   display: flex;
-  justify-content: space-between;
-  margin: 8px;
+  justify-content: space-around;
+  // margin: 8px;
   height: 80px;
 }
 .avatar {
@@ -34,8 +78,4 @@
 
 .navbar-nav  {
   width: 100%;
-}
-.header__title a:hover {
-  text-decoration: none;
-  color: black;
 }

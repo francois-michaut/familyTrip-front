@@ -10,7 +10,7 @@ function MyTribe() {
         Bienvenue dans la tribu ....
       </h2>
       <section className="row justify-content-around">
-        <div className="myTribe__members col-10 col-lg-5">
+        <div className="myTribe__members col-10 col-lg-5 ">
           <h3 className="myTribe__members--title">
             Les différents membres de votre tribu
           </h3>
@@ -34,7 +34,7 @@ function MyTribe() {
         </div>
       </section>
       <section className="row justify-content-around">
-        <div className="myTribe__activities col-10 col-lg-5">
+        <div className="myTribe__activities col-10 col-lg-5 ">
           <h3 className="myTribe__activities--title">
             Vos activités programmées
           </h3>
@@ -43,7 +43,7 @@ function MyTribe() {
             <li>Canöé-kayak le 08/08/2022 à Carcassonne</li>
           </ul>
         </div>
-        <div className="myTribe__remembers col-10 col-lg-5">
+        <div className="myTribe__remembers col-10 col-lg-5 ">
           <h3 className="myTribe__remembers--title">
             Vos souvenirs
           </h3>
