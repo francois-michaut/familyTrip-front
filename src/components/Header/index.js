@@ -3,7 +3,7 @@
 import './header.scss';
 
 import logoAvatar from 'src/assets/images/kisspng-computer-icons-avatar-login-user-avatar-5ac207e6c8c133.5629676315226654468223.png';
-import logoSite from 'src/assets/images/logoFamilytrip.png';
+import logoSite from 'src/assets/images/logo-title.png';
 import { NavLink } from 'react-router-dom';
 
 // Composant
@@ -30,7 +30,12 @@ function Header() {
           </div>
         </div>
       </div>
-      <h1 className="text-center header__title m-2"><a href="/">FAMILY TRIP</a></h1>
+      <div className="text-center header__titleLogos ">
+        <a href="/">
+          <img className="header__title--img" alt="logo-title" src={logoSite} />
+          <h1 className="header__title">FamillyTrip</h1>
+        </a>
+      </div>
       <nav className="navbar bg-dark d-none d-lg-block navbar-expand-lg bg-light my-2">
         <div className="container-fluid">
           <div className="collapse navbar-collapse " id="navbarNav">
