@@ -39,7 +39,11 @@
     }
     @media screen and (min-width:1440px) {
       position: relative;
-      left: 500px;
+      left: 600px;
+    }
+    @media screen and (min-width:1600px) {
+      position: relative;
+      left: 800px;
     }
    
   }
