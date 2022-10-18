@@ -15,6 +15,9 @@
   height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  border:15px solid white;
+  // border-bottom: 50px solid white;
+  border-radius: 20px;
 }
 .card__activity:hover .card-inner, .card__remember:hover .card-inner, .card__shopping:hover .card-inner {
   transform: rotateY(180deg);
@@ -26,14 +29,14 @@
   width: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  padding: 16px;
-  border-radius: 8px;
+  // padding: 16px;
+  border-radius: 8px ;
 }
 .card-front {
   background-color: sandybrown;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   overflow: hidden;
 }
 
@@ -46,46 +49,60 @@
 }
 
 .card-front, .card-content {
-  z-index: 1;
   color: black;
+  position: absolute;
 }
 
 .card-front .card-content p {
-  color: azure;
+  // color: azure;
 }
 
 .card-back {
   transform: rotateY(180deg);
-  background-color: #faf6f1;
-  background-image: url(../../assets/images/kisspng-wedding-invitation-postcard-stock-photography-pape-vintage-postcard-5a74d1ff98ce73.9887816115176053756259.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: flex;
+  background-color: #faf6f1;  display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width:1024px) {
+    background-image: url(../../assets/images/kisspng-wedding-invitation-postcard-stock-photography-pape-vintage-postcard-5a74d1ff98ce73.9887816115176053756259.png);
+    background-size: contain;
+    background-repeat: no-repeat;    
+  }
+
 }
 
 .card-back .card-text {
-  width: 120px;
-  height: 200px;
-  margin: 0 auto;
+  width: 50%;
+  height: 80%;
+  margin: 10px 20px;
 }
 
 .card__activity .card-front {
-  background-image: url(../../assets/images/activites_ete_1360x570-1.jpg);
+  background-image: url(../../assets/images/velo-natation-randonnee-quel-sport-ete-choisir-pour-bruler-plus-calories.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-}
+  @media screen and (min-width:1024px) {
+    background-image: url(../../assets/images/activites_ete_1360x570-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+    
+  }
 
 .card-front .card-title {
-  color: white;
-  font-size: 2.8em;
-  padding: 12px;
+  color: black;
+  font-size: 1.8em;
+  padding: 10px;
   border-radius: 20px;
   background-color: rgb(128, 128, 128, 0.3);
   font-family: 'Bangers', incursive;
+  position: relative;
+  // top: 10px;
 }
 .card__button {
   border-radius: 20px;
   padding: 4px;
+}
+.card-back .card-content {
+  width: 90%;
+  height: 90%;
 }

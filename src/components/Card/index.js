@@ -19,7 +19,7 @@ function Card({
         </div>
         <div className="card-back">
           <div className="card-content">
-            <p className="card-text">
+            <p className="card-text col-4">
               {text}
             </p>
             <button className="card__button" type="button">

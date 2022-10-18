@@ -26,7 +26,7 @@ function Header() {
         <div className="header__logos">
           <div className="connexionBlock">
             <img className="avatar" src={logoAvatar} alt="avatar " />
-            <a className="nav-link" href="/Connexion">Se connecter</a>
+            <a className="nav-link" href="/Connexion">Connexion</a>
           </div>
         </div>
       </div>
