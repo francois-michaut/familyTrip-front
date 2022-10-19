@@ -1,7 +1,7 @@
 .card__activity, .card__remember, .card__shopping {
   margin: 12px auto;
   width: 250px;
-  height: 320px;
+  height: 280px;
   perspective: 1000px;
   text-align: center;
   @media screen and (min-width:1024px) {
@@ -53,9 +53,6 @@
   position: absolute;
 }
 
-.card-front .card-content p {
-  // color: azure;
-}
 
 .card-back {
   transform: rotateY(180deg);
@@ -77,7 +74,7 @@
 }
 
 .card__activity .card-front {
-  background-image: url(../../assets/images/velo-natation-randonnee-quel-sport-ete-choisir-pour-bruler-plus-calories.jpg);
+  background-image: url(../../assets/images/01_Activite-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   @media screen and (min-width:1024px) {
@@ -106,3 +103,10 @@
   width: 90%;
   height: 90%;
 }
+ .card__remember .card-front{
+   background-image: url(../../assets/images/souvenir-mobile.jpg);
+ }
+
+ .card__shopping .card-front {
+   background-image: url(../../assets/images/AdobeStock_243183615-1-768x512.jpg);
+ }
