@@ -18,15 +18,15 @@ function Card({
           </div>
         </div>
         <div className="card-back">
-          <div className="card-content">
-            <p className="card-text col-4">
+          <div className="card-content ">
+            <h4 className="card-text  ">
               {text}
-            </p>
-            <button className="card__button" type="button">
-              <Link to={`/${slug}`}>
+            </h4>
+            <Link to={`/${slug}`}>
+              <button className="card__button " type="button">
                 {button}
-              </Link>
-            </button>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
