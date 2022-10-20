@@ -9,6 +9,7 @@ import Remember from '../Remember';
 import MyTribe from '../MyTribe';
 import Tribe from '../Tribe';
 import Connection from '../Connection';
+import Account from '../Account';
 
 import './styles.css';
 
@@ -25,6 +26,7 @@ function Home() {
         <Route path="/Tribe" element={<Tribe />} />
         <Route path="/MyTribe" element={<MyTribe />} />
         <Route path="/Connexion" element={<Connection />} />
+        <Route path="/Account" element={<Account />} />
       </Routes>
       <Footer />
     </div>

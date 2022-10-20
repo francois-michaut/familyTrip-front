@@ -5,7 +5,7 @@
   margin:  auto;
   height: 500px;
   &__title {
-    margin: 30px;
+    margin: 30px auto;
     font-family: 'Bangers', cursive;
     font-size: 2rem;
   }
@@ -14,9 +14,14 @@
     flex-direction: column;
     width: 50%;
     margin: 0px auto;
+    @media screen and (min-width:1024px) {
+      width: 30%;
+    }
   }
-  &__buttons button {
+  &__button {
+    font-size: 0.9em;
     margin:  16px 0;
+    padding: 8px;
   }
 }
 
