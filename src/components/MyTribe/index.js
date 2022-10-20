@@ -15,7 +15,7 @@ function MyTribe() {
           <Card
             title="Vos activités"
             text="Vous n'avez aucune activité."
-            button="Créer une activité"
+            button="En créer une"
             slug="activity"
           />
         </div>
@@ -23,7 +23,7 @@ function MyTribe() {
           <Card
             title="Vos souvenirs"
             text="Vous n'avez aucun souvenir."
-            button="Créer un souvenir"
+            button="En créer un"
             slug="remember"
           />
         </div>
@@ -31,7 +31,7 @@ function MyTribe() {
           <Card
             title="Vos shoppingList"
             text="Vous n'avez aucune shoppingList."
-            button="Créer une shoppingList"
+            button="En créer une"
             slug="shopping"
           />
         </div>
