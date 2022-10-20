@@ -1,0 +1,136 @@
+.card__activity, .card__remember, .card__shopping {
+  margin: 12px auto;
+  width: 250px;
+  height: 280px;
+  perspective: 1000px;
+  text-align: center;
+  
+  @media screen and (min-width:1024px) {
+    width: 800px;
+    height: 560px;
+    background-color: white;
+    margin-bottom: 50px;
+  }
+}
+.card__activity .card-inner, .card__remember .card-inner, .card__shopping .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border:15px solid white;
+  border-radius: 20px;
+}
+.card__activity:hover .card-inner, .card__remember:hover .card-inner, .card__shopping:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  // padding: 16px;
+  border-radius: 8px ;
+}
+.card-front {
+  background-color: sandybrown;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.card-front:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+}
+
+.card-front, .card-content {
+  color: black;
+  position: absolute;
+}
+
+
+.card-back {
+  transform: rotateY(180deg);
+  background: url(../../assets/images/bloc-notes-detachable-ecris-ta-v\ \(1\).jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width:1024px) {
+    background-image: url(../../assets/images/kisspng-wedding-invitation-postcard-stock-photography-pape-vintage-postcard-5a74d1ff98ce73.9887816115176053756259.png);
+    background-size: cover;
+    // background-repeat: no-repeat;    
+  }
+
+}
+
+.card-back .card-text {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.card__activity .card-front {
+  background-image: url(../../assets/images/01_Activite-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width:1024px) {
+    background-image: url(../../assets/images/activites_ete_1360x570-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+    
+  }
+
+.card-front .card-title {
+  color: black;
+  font-size: 1.8em;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(128, 128, 128, 0.3);
+  font-family: 'Bangers', incursive;
+  position: relative;
+  @media screen and (min-width:1024px) {
+    bottom: 200px;
+    font-size: 2.5em;
+    padding: 16px;
+  }
+}
+.card__button {
+  border-radius: 20px;
+  padding: 4px;
+  background-color: rgb(255, 255, 255, 0.1);
+  }
+.card-back .card-content {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ .card__remember .card-front{
+   background-image: url(../../assets/images/souvenir-mobile.jpg);
+   @media screen and (min-width:1024px) {
+      background-image: url(../../assets/images/image-souvenirs-vacances-quels.jpg) ;
+   }
+ }
+
+ .card__shopping .card-front {
+   background-image: url(../../assets/images/AdobeStock_243183615-1-768x512.jpg);
+   @media screen and (min-width:1024px) {
+     background-image: url(../../assets/images/AdobeStock_243183615-1-768x512.jpeg);
+     background-size: cover;
+   }
+ }
+
