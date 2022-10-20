@@ -1,5 +1,36 @@
 .header {
   position: relative;
+  @media screen and (min-width:320px) and (max-width:355px) {
+      background: url(../../assets/images/logo-title.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 40%;    
+  }
+  @media screen and (min-width:356px) and (max-width:368px) {
+      background: url(../../assets/images/logo-title.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 42%;    
+  }
+  @media screen and (min-width:369px) and (max-width:399px) {
+      background: url(../../assets/images/logo-title.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 45%;    
+  }
+  @media screen and (min-width:400px) and (max-width:480px) {
+      background: url(../../assets/images/logo-title.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 50%;    
+  }
+  @media screen and (min-width:480px) and (max-width:780px) {
+      background: url(../../assets/images/logo-title.png);
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position-y: 50%;   
+      background-position-x: 50%; 
+  }
   &__title {
     @media screen and (max-width:1024px) {
       display: none;
@@ -14,6 +45,7 @@
   &__titleLogos {
     margin-top:20px;
     height: 130px;
+    
     @media screen and (min-width:1024px) {
       height: 80px;
     }

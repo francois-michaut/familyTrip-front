@@ -1,0 +1,17 @@
+.account {
+  margin-top: 50px;
+  text-align: center;
+  &__title {
+    margin: 30px;
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+  }
+  &__form .mb-2 {
+    width: 70%;
+    margin: 20px auto;
+    text-align: left;
+  }
+  &__form button {
+    margin-top: 60px;
+  }
+}

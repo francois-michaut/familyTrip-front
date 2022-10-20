@@ -1,5 +1,6 @@
 // Import
 import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import {
   saveCurrentUser, saveUserEmail, saveUserName, saveUserPassword,
 } from '../../actions/users';
@@ -67,7 +68,7 @@ function Connection() {
       <div className="connection__buttons ">
         <button type="submit" className="connection__button btn btn-success " onClick={handleSubmitUser}>Se connecter</button>
 
-        <button type="submit" className="connection__button btn btn-success " onClick={handleSubmitUser}>Créer un compte</button>
+        <button type="button" className="connection__button btn btn-success "><NavLink to="/Account">Créer un compte</NavLink></button>
       </div>
     </main>
   );
