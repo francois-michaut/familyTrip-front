@@ -4,6 +4,7 @@ import './header.scss';
 
 import logoAvatar from 'src/assets/images/kisspng-computer-icons-avatar-login-user-avatar-5ac207e6c8c133.5629676315226654468223.png';
 import logoSite from 'src/assets/images/logo-title.png';
+import logoSmall from 'src/assets/images/FamillyTrip.png';
 import { NavLink } from 'react-router-dom';
 
 // Composant
@@ -11,6 +12,7 @@ import { NavLink } from 'react-router-dom';
 function Header() {
   return (
     <header className="header">
+      <img src={logoSmall} alt="logo" className="logoSmall" />
       <div className="navbar-log">
         <div className="dropdown d-lg-none ">
           <button className="btn btn-primary fixed-top dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu
