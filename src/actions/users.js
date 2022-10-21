@@ -98,4 +98,52 @@ export const cleanCurrentUser = () => ({
   type: CLEAN_CURRENT_USER,
 });
 
+// ACTION TYPE SAVE_USER_NAME_ACCOUNT
+export const SAVE_USER_NAME_ACCOUNT = 'SAVE_USER_NAME_ACCOUNT';
 
+// ACTION CREATOR saveUserNameAccount
+export const saveUserNameAccount = (value) => ({
+  type: SAVE_USER_NAME_ACCOUNT,
+  value,
+});
+
+// ACTION TYPE SAVE_USER_FIRSTNAME_ACCOUNT
+export const SAVE_USER_FIRSTNAME_ACCOUNT = 'SAVE_USER_FIRSTNAME_ACCOUNT';
+
+// ACTION CREATOR saveUserFirstnameAccount
+export const saveUserFirstnameAccount = (value) => ({
+  type: SAVE_USER_FIRSTNAME_ACCOUNT,
+  value,
+});
+// ACTION TYPE SAVE_USER_MAIL_ACCOUNT
+export const SAVE_USER_MAIL_ACCOUNT = 'SAVE_USER_MAIL_ACCOUNT';
+
+// ACTION CREATOR saveUserMailAccount
+export const saveUserMailAccount = (value) => ({
+  type: SAVE_USER_MAIL_ACCOUNT,
+  value,
+});
+// ACTION TYPE SAVE_USER_PSEUDO_ACCOUNT
+export const SAVE_USER_PSEUDO_ACCOUNT = 'SAVE_USER_PSEUDO_ACCOUNT';
+
+// ACTION CREATOR saveUserPseudoAccount
+export const saveUserPseudoAccount = (value) => ({
+  type: SAVE_USER_PSEUDO_ACCOUNT,
+  value,
+});
+// ACTION TYPE SAVE_USER_PASSWORD_ACCOUNT
+export const SAVE_USER_PASSWORD_ACCOUNT = 'SAVE_USER_PASSWORD_ACCOUNT';
+
+// ACTION CREATOR saveUserPasswordAccount
+export const saveUserPasswordAccount = (value) => ({
+  type: SAVE_USER_PASSWORD_ACCOUNT,
+  value,
+});
+// ACTION TYPE SAVE_USER_PASSWORD_VERIFY_ACCOUNT
+export const SAVE_USER_PASSWORD_VERIFY_ACCOUNT = 'SAVE_USER_PASSWORD_VERIFY_ACCOUNT';
+
+// ACTION CREATOR saveUserPasswordVerifyAccount
+export const saveUserPasswordVerifyAccount = (value) => ({
+  type: SAVE_USER_PASSWORD_VERIFY_ACCOUNT,
+  value,
+});
