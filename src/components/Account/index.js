@@ -12,9 +12,10 @@ function Account() {
   const formSchema = yup.object().shape({
     userPassword: yup.string()
       .required('Vous devez choisir un mot de passe')
-      .min(8, 'Le mot de passe doit faire au moins 8 caractères'),
+      .min(8, 'Le mot de passe doit faire au moins 8 caractères')
+      .matches(/([0-9])/, 'Votre mot de passe doit contenir au moins un entier'),
     userConfirmPassword: yup.string()
-      .required('vous devez confirmer votre mot de passe')
+      .required('Vous devez confirmer votre mot de passe')
       .min(8, 'Le mot de passe doit faire au moins 8 caractères')
       .oneOf([yup.ref('userPassword')], 'Les mots de passe ne concordent pas.'),
     userName: yup.string()

@@ -17,7 +17,6 @@ export const initialState = {
   userMailAccount: '',
   userPseudoAccount: '',
   userPasswordAccount: '',
-  userPasswordVerifyAccount: '',
 };
 
 function reducer(state = initialState, action = {}) {
