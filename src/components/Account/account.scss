@@ -9,12 +9,20 @@
   &__form .mb-2 {
     width: 70%;
     margin: 20px auto;
+    & .form-control {
+      margin-top: 4px;
+    }
   }
   &__form .mb-2 .form-label {
     text-align: left;
   }
   &__form button {
     margin-top: 60px;
+  }
+  &__form .alert {
+    width: 56%;
+    margin: 0 auto;
+    font-size: 0.9em;
   }
 }
 

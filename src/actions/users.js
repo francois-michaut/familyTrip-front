@@ -147,3 +147,11 @@ export const saveUserPasswordVerifyAccount = (value) => ({
   type: SAVE_USER_PASSWORD_VERIFY_ACCOUNT,
   value,
 });
+// ACTION TYPE SAVE_FORM_USER
+export const SAVE_FORM_USER = 'SAVE_FORM_USER';
+
+// ACTION CREATOR saveFormUser
+export const saveFormUser = (value) => ({
+  type: SAVE_FORM_USER,
+  value,
+});

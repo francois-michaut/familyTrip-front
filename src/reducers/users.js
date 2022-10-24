@@ -1,15 +1,10 @@
 import {
   CLEAN_CURRENT_USER,
   LOAD_USERS,
+  SAVE_FORM_USER,
   SAVE_USER_EMAIL,
-  SAVE_USER_FIRSTNAME_ACCOUNT,
-  SAVE_USER_MAIL_ACCOUNT,
   SAVE_USER_NAME,
-  SAVE_USER_NAME_ACCOUNT,
   SAVE_USER_PASSWORD,
-  SAVE_USER_PASSWORD_ACCOUNT,
-  SAVE_USER_PASSWORD_VERIFY_ACCOUNT,
-  SAVE_USER_PSEUDO_ACCOUNT,
 } from '../actions/users';
 
 export const initialState = {
@@ -54,35 +49,14 @@ function reducer(state = initialState, action = {}) {
         userName: '',
         userPassword: '',
       };
-    case SAVE_USER_NAME_ACCOUNT:
+    case SAVE_FORM_USER:
       return {
         ...state,
-        userNameAccount: action.value,
-      };
-    case SAVE_USER_FIRSTNAME_ACCOUNT:
-      return {
-        ...state,
-        userFirstnameAccount: action.value,
-      };
-    case SAVE_USER_MAIL_ACCOUNT:
-      return {
-        ...state,
-        userMailAccount: action.value,
-      };
-    case SAVE_USER_PSEUDO_ACCOUNT:
-      return {
-        ...state,
-        userPseudoAccount: action.value,
-      };
-    case SAVE_USER_PASSWORD_ACCOUNT:
-      return {
-        ...state,
-        userPasswordAccount: action.value,
-      };
-    case SAVE_USER_PASSWORD_VERIFY_ACCOUNT:
-      return {
-        ...state,
-        userPasswordVerifyAccount: action.value,
+        userNameAccount: action.value.userName,
+        userFirstnameAccount: action.value.userFirstname,
+        userMailAccount: action.value.userMail,
+        userPseudoAccount: action.value.userPseudo,
+        userPasswordAccount: action.value.userPassword,
       };
     default:
       return state;
