@@ -80,6 +80,10 @@
     }
    
   }
+  &__link:link {
+    text-decoration: none;
+    color: #212529;
+  }
 }
 .image__logo {
   width: 150px;

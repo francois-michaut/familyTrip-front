@@ -28,16 +28,18 @@ function Account() {
     userPseudo: yup.string()
       .required('Merci de renseigner votre pseudo'),
   });
+
   const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(formSchema) });
 
-  const onSubmit = (data) => {
+  function onSubmit(data) {
     dispatch(saveFormUser(data));
-  };
+  }
 
   return (
     <main className="account">
