@@ -10,6 +10,7 @@ import {
   GET_USER,
   loadUsers,
   POST_TRIBE_NAME,
+  POST_USER_TO_API,
   saveTribes,
   SAVE_CURRENT_USER,
 } from '../actions/users';
@@ -132,17 +133,25 @@ const apiMiddleware = (store) => (next) => (action) => {
       next(action);
       break;
     }
-    case SAVE_CURRENT_USER: {
+    case POST_USER_TO_API: {
       const state = store.getState();
-      const { userName, userEmail, userPassword } = state.users;
-      console.log(userName, userEmail, userPassword);
+      const {
+        userNameAccount,
+        userMailAccount,
+        userPasswordAccount,
+        userPseudoAccount,
+        userFirstnameAccount,
+      } = state.users;
+
       axiosInstance
         .post(
           'Api/userPost',
           JSON.stringify({
-            userName: userName,
-            userEmail: userEmail,
-            userPassword: userPassword,
+            userName: userNameAccount,
+            userMail: userMailAccount,
+            userPassword: userPasswordAccount,
+            userFirstname: userFirstnameAccount,
+            userPseudo: userPseudoAccount,
           }),
         )
         .then((response) => {

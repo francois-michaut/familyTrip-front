@@ -155,3 +155,10 @@ export const saveFormUser = (value) => ({
   type: SAVE_FORM_USER,
   value,
 });
+// ACTION TYPE POST_USER_TO_API
+export const POST_USER_TO_API = 'POST_USER_TO_API';
+
+// ACTION CREATOR postUserToApi
+export const postUserToApi = () => ({
+  type: POST_USER_TO_API,
+});

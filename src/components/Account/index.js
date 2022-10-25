@@ -4,9 +4,9 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
+import { postUserToApi, saveFormUser } from '../../actions/users';
 
 import './account.scss';
-import { saveFormUser } from '../../actions/users';
 
 function Account() {
   const formSchema = yup.object().shape({
@@ -39,6 +39,7 @@ function Account() {
 
   function onSubmit(data) {
     dispatch(saveFormUser(data));
+    dispatch(postUserToApi());
   }
 
   return (
